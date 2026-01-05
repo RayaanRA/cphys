@@ -3,6 +3,8 @@
 
 #include "vector.h"
 
+#define G 1
+
 void grav_force_body(phys_body* body, phys_system* system);
 
 #endif
