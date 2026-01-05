@@ -1,6 +1,8 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
+#include <stddef.h>
+
 typedef struct phys_vector2 {
 	float x;
 	float y;
