@@ -2,6 +2,7 @@
 #define FORCE_H
 
 #include "vector.h"
+#include "body.h"
 
 #define G 1
 

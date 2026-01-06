@@ -8,7 +8,7 @@ typedef struct phys_body {
 	phys_vector2 vel;
 	phys_vector2 accel;
 	float mass;
-	float force;
+	phys_vector2 force;
 
 } phys_body;
 
