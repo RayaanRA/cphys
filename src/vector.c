@@ -15,3 +15,7 @@ float phys_vector2_mag(phys_vector2 a) {
 float phys_vector2_dist(phys_vector2 a, phys_vector2 b) {
 	return phys_vector2_mag(phys_vector2_sub(a, b));
 }
+
+phys_vector2 phys_scalar_mult(float a, phys_vector2 b) {
+	return (phys_vector2) {b.x * a, b.y * a};
+}
