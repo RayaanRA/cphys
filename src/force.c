@@ -15,3 +15,9 @@ void grav_force_body(phys_body* body, phys_system* system) {
 		body->force = phys_vector2_add(body->force, force);
 	}
 }
+
+void grav_force_system(phys_system* system) {
+	for (int i = 0; i < system->count; i++) {
+		grav_force_body(&(system->bodies[i]), system);
+	}
+}

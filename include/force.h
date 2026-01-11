@@ -7,5 +7,6 @@
 #define G 1
 
 void grav_force_body(phys_body* body, phys_system* system);
+void grav_force_system(phys_system* system);
 
 #endif
