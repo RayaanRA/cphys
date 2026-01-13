@@ -8,5 +8,7 @@
 
 void grav_force_body(phys_body* body, phys_system* system);
 void grav_force_system(phys_system* system);
+void accel_body(phys_body* body);
+void accel_system(phys_system* system);
 
 #endif

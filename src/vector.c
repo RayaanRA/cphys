@@ -8,14 +8,14 @@ phys_vector2 phys_vector2_sub(phys_vector2 a, phys_vector2 b) {
 	return (phys_vector2) {(a.x - b.x), (a.y - b.y)};
 }
 
-float phys_vector2_mag(phys_vector2 a) {
+double phys_vector2_mag(phys_vector2 a) {
 	return sqrtf(a.x * a.x + a.y * a.y);
 }
 
-float phys_vector2_dist(phys_vector2 a, phys_vector2 b) {
+double phys_vector2_dist(phys_vector2 a, phys_vector2 b) {
 	return phys_vector2_mag(phys_vector2_sub(a, b));
 }
 
-phys_vector2 phys_scalar_mult(float a, phys_vector2 b) {
+phys_vector2 phys_scalar_mult(double a, phys_vector2 b) {
 	return (phys_vector2) {b.x * a, b.y * a};
 }
