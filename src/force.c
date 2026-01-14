@@ -13,6 +13,7 @@ void grav_force_body(phys_body* body, phys_system* system) {
 		double scalar_factor = -G * body->mass * (system->bodies[i]).mass * (inv_dist * inv_dist * inv_dist);
 		
 		phys_vector2 force = phys_scalar_mult(scalar_factor, displacement);
+		// TODO: add force softening
 		body->force = phys_vector2_add(body->force, force);
 	}
 }
