@@ -2,5 +2,6 @@
 #define INTEGRATOR_H
 
 #include "vector.h"
+#include "body.h"
 
 #endif
