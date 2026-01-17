@@ -8,6 +8,7 @@ TEST_DIR  := tests
 OBJ_DIR   := obj
 TEST_BIN  := test_bin
 LIB       := libcphys.a
+LDLIBS    := -lm
 
 SRCS := $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
@@ -33,7 +34,7 @@ tests: $(TEST_BINS)
 $(TEST_DIR)/%.c: $(TEST_BIN)/%
 
 $(TEST_BIN)/%: $(TEST_DIR)/%.c $(LIB) | $(TEST_BIN)
-	$(CC) $(CFLAGS) $< -L. -lcphys -o $@
+	$(CC) $(CFLAGS) $< -L. -lcphys $(LDLIBS) -o $@
 
 $(TEST_BIN):
 	mkdir -p $(TEST_BIN)

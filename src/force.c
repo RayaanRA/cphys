@@ -2,7 +2,7 @@
 
 void grav_force_body(phys_body* body, phys_system* system) {
 	body->force = (phys_vector2) {0, 0};
-	for (int i = 0; i < system->count; i++) {
+	for (size_t i = 0; i < system->count; i++) {
 		if (&(system->bodies[i]) == body) {continue;}
 
 		double dist = phys_vector2_dist(body->pos, (system->bodies[i]).pos);
@@ -19,7 +19,7 @@ void grav_force_body(phys_body* body, phys_system* system) {
 }
 
 void grav_force_system(phys_system* system) {
-	for (int i = 0; i < system->count; i++) {
+	for (size_t i = 0; i < system->count; i++) {
 		grav_force_body(&(system->bodies[i]), system);
 	}
 }
@@ -29,7 +29,7 @@ void accel_body(phys_body* body) {
 }
 
 void accel_system(phys_system* system) {
-	for (int i = 0; i < system->count; i++) {
+	for (size_t i = 0; i < system->count; i++) {
 		accel_body(&(system->bodies[i]));
 	}
 }

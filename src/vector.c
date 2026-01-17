@@ -9,7 +9,7 @@ phys_vector2 phys_vector2_sub(phys_vector2 a, phys_vector2 b) {
 }
 
 double phys_vector2_mag(phys_vector2 a) {
-	return sqrtf(a.x * a.x + a.y * a.y);
+	return sqrt(a.x * a.x + a.y * a.y);
 }
 
 double phys_vector2_dist(phys_vector2 a, phys_vector2 b) {
