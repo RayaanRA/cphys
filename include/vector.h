@@ -12,6 +12,7 @@ typedef struct phys_vector2 {
 phys_vector2 phys_vector2_add(phys_vector2 a, phys_vector2 b);
 phys_vector2 phys_vector2_sub(phys_vector2 a, phys_vector2 b);
 double phys_vector2_mag(phys_vector2 a);
+double phys_vector2_mag2(phys_vector2 a);
 double phys_vector2_dist(phys_vector2 a, phys_vector2 b);
 phys_vector2 phys_scalar_mult(double a, phys_vector2 b);
 

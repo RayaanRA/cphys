@@ -12,6 +12,10 @@ double phys_vector2_mag(phys_vector2 a) {
 	return sqrt(a.x * a.x + a.y * a.y);
 }
 
+double phys_vector2_mag2(phys_vector2 a) {
+    return a.x * a.x + a.y * a.y;
+}
+
 double phys_vector2_dist(phys_vector2 a, phys_vector2 b) {
 	return phys_vector2_mag(phys_vector2_sub(a, b));
 }
