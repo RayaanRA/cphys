@@ -3,7 +3,12 @@
 
 #include "vector.h"
 #include "body.h"
+#include "force.h"
 
-void phys_leapfrog_step(phys_system* system);
+enum integrator {
+	LEAPFROG
+};
 
+void integrate_step_system(phys_system* system, enum integrator integrator, double dt);
+void leapfrog_step_system(phys_system* system, double dt);
 #endif
