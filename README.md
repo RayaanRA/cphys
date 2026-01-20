@@ -3,7 +3,7 @@ A physics library for 2D Newtonian N-body simulations.
 
 ## Usage
 
-```
+```c
 #include "cphys.h"
 
 phys_body bodies[2];
