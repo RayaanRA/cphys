@@ -15,13 +15,13 @@ void leapfrog_step_system(phys_system* system, double dt) {
 	// kick
 	for (size_t i = 0; i < system->count; i++) {
 		phys_body* body = &system->bodies[i];
-		body->vel = phys_vector_add(body->vel, phys_scalar_mult(dt_half, body->accel));
+		body->vel = phys_vector2_add(body->vel, phys_scalar_mult(dt_half, body->accel));
 	}
 
 	// drift
 	for (size_t i = 0; i < system->count; i++) {
 		phys_body* body = &system->bodies[i];
-		body->pos = phys_vector_add(body->pos, phys_scalar_mult(dt, body->vel));
+		body->pos = phys_vector2_add(body->pos, phys_scalar_mult(dt, body->vel));
 	}
 
 	grav_force_system(system);
@@ -30,6 +30,6 @@ void leapfrog_step_system(phys_system* system, double dt) {
 	// kick
 	for (size_t i = 0; i < system->count; i++) {
 		phys_body* body = &system->bodies[i];
-		body->vel = phys_vector_add(body->vel, phys_scalar_mult(dt_half, body->accel));
+		body->vel = phys_vector2_add(body->vel, phys_scalar_mult(dt_half, body->accel));
 	}
 }
