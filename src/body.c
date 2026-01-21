@@ -8,8 +8,9 @@ void phys_init_body(phys_body* body, phys_vector2 pos, phys_vector2 vel, phys_ve
 	body->force = (phys_vector2) {0, 0};
 }
 
-void phys_init_system(phys_system* system, phys_body* bodies, size_t count, double characteristic_length, double fraction) {
+void phys_init_system(phys_system* system, phys_body* bodies, size_t count, double softening, double G) {
 	system->bodies = bodies;
 	system->count = count;
-	system->softening = fraction * characteristic_length;
+	system->softening = softening;
+	system->G = G;
 }

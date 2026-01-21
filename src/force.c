@@ -12,7 +12,7 @@ void grav_force_body(phys_body* body, phys_system* system) {
         double distance_squared = phys_vector2_mag2(displacement_vector);
         double inverse_distance_cubed = 1.0 / pow(distance_squared + softening_squared, 1.5);
 
-        double force_scalar = -G * body->mass * other_body->mass * inverse_distance_cubed;
+        double force_scalar = -system->G * body->mass * other_body->mass * inverse_distance_cubed;
         phys_vector2 force_vector = phys_scalar_mult(force_scalar, displacement_vector);
         body->force = phys_vector2_add(body->force, force_vector);
     }
@@ -66,7 +66,7 @@ double system_total_energy(phys_system* system) {
             double distance_squared = phys_vector2_mag2(displacement_vector);
             double softened_distance = sqrt(distance_squared + softening_squared);
 
-            double potential_energy_pair = -G * body_i->mass * body_j->mass / softened_distance;
+            double potential_energy_pair = -system->G * body_i->mass * body_j->mass / softened_distance;
             total_potential_energy += potential_energy_pair;
         }
     }

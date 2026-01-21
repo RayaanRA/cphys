@@ -31,3 +31,6 @@ for (int step = 0; step < 100; step++) {
 - Direct summation of forces  
 - Leapfrog integration requires precomputed acceleration before first step  
 - Force softening is relative to a given characteristic length
+
+---
+See [an implementation of this library](https://github.com/RayaanRA/n-body-simulator)
