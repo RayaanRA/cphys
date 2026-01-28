@@ -1,6 +1,7 @@
 CC      := gcc
 AR      := ar
-CFLAGS  := -std=c11 -Wall -Wextra -Wpedantic -Iinclude
+OPTFLAG ?= -O0
+CFLAGS  := -std=c11 -Wall -Wextra -Wpedantic -Iinclude $(OPTFLAG)
 ARFLAGS := rcs
 
 SRC_DIR   := src

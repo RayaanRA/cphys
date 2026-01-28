@@ -1,5 +1,20 @@
 # cphys
-A physics library for 2D Newtonian N-body simulations.  
+A physics library for 2D Newtonian N-body simulations.
+
+## Building
+
+```bash
+git clone git@github.com:RayaanRA/cphys.git
+cd cphys
+make
+```
+
+### Optimization Flags
+
+The default optimization flag is `-O0`. A flag can be specified:
+```bash
+make OPTFLAG=-01
+```  
 
 ## Usage
 
@@ -11,7 +26,7 @@ phys_init_body(&bodies[0], (phys_vector2){0,0}, (phys_vector2){1,0}, (phys_vecto
 phys_init_body(&bodies[1], (phys_vector2){1,0}, (phys_vector2){-1,0}, (phys_vector2){0,0}, 1.0);
 
 phys_system system;
-phys_init_system(&system, bodies, 2, 1.0, 0.01); // characteristic length, softening fraction
+phys_init_system(&system, bodies, 2, 0.1, 1.0);
 
 grav_force_system(&system);
 accel_system(&system);
